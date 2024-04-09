@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Catass</string>
+    <string name="cats_title">Cats</string>
+    <string name="tags_lbl">"Tags: "</string>
+</resources>
