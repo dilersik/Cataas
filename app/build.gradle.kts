@@ -74,6 +74,10 @@ dependencies {
     implementation(libs.gson)
     // okHttp
     implementation(platform(libs.okhttp))
+    // Mockito-Kotlin
+    testImplementation(libs.mockito.kotlin)
+    // Coroutine Testing
+    testImplementation(libs.kotlinx.coroutines.test)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

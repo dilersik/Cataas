@@ -3,7 +3,9 @@ package com.example.catass.di
 import com.example.catass.network.CatsApi
 import com.example.catass.repository.CatsRepository
 import com.example.catass.repository.CatsRepositoryImp
+import com.example.catass.utils.AndroidLogger
 import com.example.catass.utils.Constant
+import com.example.catass.utils.Logger
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,5 +28,10 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideCatsRepository(catsApi: CatsApi): CatsRepository = CatsRepositoryImp(catsApi)
+    fun provideLogger(): Logger = AndroidLogger()
+
+    @Provides
+    @Singleton
+    fun provideCatsRepository(catsApi: CatsApi, logger: Logger): CatsRepository =
+        CatsRepositoryImp(catsApi, logger)
 }
